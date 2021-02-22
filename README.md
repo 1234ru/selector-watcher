@@ -1,14 +1,15 @@
-С помощью данной библиотеки можно установить слежение за элементами HTML-документа по 
-указанному CSS-селектору.
+The tool watches HTML document's elements basing on given CSS selector. 
 
-Это удобно, когда какие-то операции нужно выполнить не только для элементов, уже 
-присутствующих на странице, но и для добавленных в будущем.
+This may be used for running some code not only on elements which exist at the moment, but for newly added ones as well.
 
-Библиотека написана на чистом Javascript без каких-либо внешних зависимостей.
+The library uses just pure Javascript without any dependencies.
 
-## Примеры
+*[Читать на русском](README-RU.md)*
 
-1. Сделать красными все ссылки на странице, в том числе добавленные в будущем.
+
+## Examples
+
+1. Make all links on the page turn red, including ones added in the future:
 
 ```javascript
 new Freedom.SelectorWatcher().attach( {
@@ -19,11 +20,10 @@ new Freedom.SelectorWatcher().attach( {
 } );
 ```
 
-(`Freedom` - веб-фреймворк, в рамках которого ведется разработка, отсюда и название 
-пространства имён.)
+(`Freedom` is a web framework featuring this library, hence the namespace's name.)
 
-2. Также назначить ссылкам обработчик события `click`:
-
+2. Also add a `click` event handler for links: 
+   
 ```javascript
 new Freedom.SelectorWatcher().attach( {
     selector: 'a',
@@ -38,7 +38,7 @@ new Freedom.SelectorWatcher().attach( {
 } );
 ```
 
-3. Отключить слежение
+3. Turn watcher off:
 
 ```javascript
 var watcher = new Freedom.SelectorWatcher().attach( {/*...*/} );
@@ -46,8 +46,7 @@ watcher.detach();
 ```
 
 
-## Примечания
+## Notes
 
-Обработчики назначаются элементу `<body>`, каждый в единственном экземпляре (аналогично 
-[`jQuery.on()`](https://api.jquery.com/on/)).
-Явное их перечисление необходимо для возможности отключения.
+Event handlers are attached to the `<body>` with only single instance created for each one 
+(similar to [`jQuery.on()`](https://api.jquery.com/on/)). They have to be listed explicitly by event type to make it possible to remove them.
