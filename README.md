@@ -2,7 +2,8 @@ The tool watches HTML document's elements basing on given CSS selector.
 
 This may be used for running some code not only on elements which exist at the moment, but for newly added ones as well.
 
-The library uses just pure Javascript without any dependencies.
+The library uses just pure Javascript without any dependencies
+and is compatible with all modern browsers including Internet Explorer 11.
 
 *[Читать на русском](README-RU.md)*
 
