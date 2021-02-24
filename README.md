@@ -1,4 +1,4 @@
-The tool watches HTML document's elements basing on given CSS selector. 
+The tool watches HTML document basing on given CSS selector. 
 
 This may be used for running some code not only on elements which exist at the moment, but for newly added ones as well.
 
