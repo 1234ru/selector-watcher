@@ -6,7 +6,7 @@ if ( !Element.prototype.matches ) { // for IE 11
 
 /**
  * @constructor
- * @link https://github.com/1234ru/watch-selector
+ * @link https://github.com/1234ru/selector-watcher
  */
 Freedom.SelectorWatcher = function() {
     this.handlersCache = {};
