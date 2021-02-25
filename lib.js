@@ -1,3 +1,5 @@
+/** @version 1.0.1 */
+
 var Freedom = Freedom || {};
 
 if ( !Element.prototype.matches ) { // for IE 11
@@ -149,7 +151,7 @@ Freedom.SelectorWatcher.prototype.catchNewMatchingElements = function(mutationsL
  */
 Freedom.SelectorWatcher.prototype.findMatchingElements = function( element, selector ) {
     var matchingElements = [];
-    if ( element.nodeType === Node.TEXT_NODE ) {
+    if ( element.nodeType !== Node.ELEMENT_NODE ) {
         return matchingElements;
     }
     if ( element.matches( selector ) ) {
